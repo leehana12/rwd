@@ -10,8 +10,8 @@
     /* border: 1px solid #000; */
 }
 
-header, dection, footer{
-    border: 10px;
+header, .lnb, .ad, .cont, footer{
+    border-radius: 10px;
 }
 
 header{
@@ -19,7 +19,53 @@ header{
     background-color: gray;
 }
 
+section{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+section>.left{
+    width: 25%;
+    height: 400px;
+}
+section>.left>.lnb{
+    height: 250px;
+    margin-bottom: 10px;
+    background-color: blue;
+}
+section>.left>.ad{
+    height: 140px;
+    background-color: pink;
+}
+section>.cont{
+    width: 74%;
+    background-color: yellow;
+}
+
+
 footer{
     height: 100px;
     background-color: red;
+}
+
+@media screen and (max-width: 640px){
+
+    #wrap{
+        width: 100%;
+        margin: 0;       
+    }
+
+    section{
+        display: block;
+    }
+
+    section>.left{
+        width: 100%;
+    }
+
+    section>.cont{
+        margin-top: 10px;
+        width: 100%;
+    }
 }
